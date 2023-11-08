@@ -115,37 +115,6 @@ def minimax(board):
     Returns the optimal action for the current player on the board. (i, j)
     """
     
-    """
-    1. moram znat jel trazim MAX ili MIN, ako je X onda MAX, ako je O onda MIN
-        - sacuvati kopiju originalnog stanja prije poteza
-    
-    2. Ako je max onda je v = -math.inf
-        - za svaku mogucu akciju odigrat do kraja igru i za svaku akciju dobiti vrijednost v
-        - zabiljeziti sve akcije koje imaju najveću vrijednost i vratiti jednu od njih (Moze i random)
-
-        funkcija max:
-            - ako je kraj v = utility(board)
-            - inače v = -math.inf
-                for action in actions(board):
-                    v = Max(v, funkcija min(result(board, action)))
-            - return v
-        
-        
-    
-    ako je MIN onda je v = math.inf
-        - za svaku slobodnu akciju odigrati do kraja da dobijem v
-        - zabiljeziti sve akcije koje su mi dalje MIN v i vratiti jednu od njih
-
-        funkcija min:
-            ako je kraj v = utility(board)
-            inače
-                v = math.inf
-                for action in actions(board):
-                    v = MIN(v, funkcija max(result(board, action)))
-            return v
-
-
-    """
     def min_value(board):
         v = math.inf
         for action in actions(board):
