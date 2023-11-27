@@ -161,7 +161,7 @@ def minimax(board):
             return random.choice(action_values[0])
             
     else:
-        action_values_ = {-1: [], 0: [], 1: []}
+        action_values = {-1: [], 0: [], 1: []}
         if len(current_actions) == 1:return current_actions.pop()
         #elif len(current_actions) > 7: return current_actions.pop()
         else:
